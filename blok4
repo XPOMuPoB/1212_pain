@@ -1,0 +1,67 @@
+let MR: [Int: String] = [
+    1: "Январь", 2: "Февраль", 3: "Март", 4: "Апрель",
+    5: "Май", 6: "Июнь", 7: "Июль", 8: "Август",
+    9: "Сентябрь", 10: "Октябрь", 11: "Ноябрь", 12: "Декабрь"]
+let ME: [Int: String] = [
+    1: "January", 2: "February", 3: "March", 4: "April",
+    5: "May", 6: "June", 7: "July", 8: "August",
+    9: "September", 10: "October", 11: "November", 12: "December"]
+    
+let iToS: [Int: String] = [1: "One", 2: "Two", 3: "Three"]
+let sToI: [String: Int] = ["One": 1, "Two": 2, "Three": 3]
+let dToS: [Double: String] = [1.1: "One point one", 2.2: "Two point two"]
+let sToB: [String: Bool] = ["IsOpen": true, "IsClosed": false]
+let cToS: [Character: String] = ["A": "Alpha", "B": "Bravo"]
+let sToD: [String: Double] = ["Pi": 3.14, "Euler": 2.71]
+let sToA: [String: [Int]] = ["Evens": [2, 4, 6], "Odds": [1, 3, 5]]
+let tKD: [Int: Any] = [1: "2", 2: 3]
+
+var allKey: [Any] = []
+var allZna: [Any] = []
+
+func collectKey(from dictionary: [AnyHashable: Any]){
+    for (key, value) in dictionary {
+        allKey.append(key)
+        allZna.append(value)
+    }
+}
+
+print(MR)
+print(ME)
+
+collectKey(from: MR)
+collectKey(from: ME)
+collectKey(from: iToS)
+collectKey(from: sToI)
+collectKey(from: dToS)
+collectKey(from: sToB)
+collectKey(from: cToS)
+collectKey(from: sToD)
+collectKey(from: sToA)
+collectKey(from: tKD)
+
+print("\(allKey) и \(allZna)")
+
+var eD: [String: Int] = [:]
+
+if eD.isEmpty {
+    print("Словарь пустой")
+    eD["One"] = 1
+    eD["Two"] = 2
+}
+for (key, value) in eD {
+    print("Key: \(key), Value: \(value)")
+}
+
+var car: [String: String] = ["Иномарка":"Henschel"]
+car["УралВагонЗавод"] = "Отчечественная"
+
+print("ключи")
+for (key, value) in car {
+    print(key, value)
+}
+
+car["Иномарка"] = nil
+if let removedValue = car.removeValue(forKey:"Иномарка"){
+    print("\(removedValue)")
+}

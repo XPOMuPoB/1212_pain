@@ -1,0 +1,37 @@
+var intVariable: Int = 42
+let intConstant: Int = 100
+var uintVariable: UInt = 10
+let uintConstant: UInt = 20
+var floatVariable: Float = 3.14
+let floatConstant: Float = 1.23
+var doubleVariable: Double = 2.718
+let doubleConstant: Double = 1.414
+var stringVariable: String = "Hello, Swift!"
+let stringConstant: String = "Hello, World!"
+print("Int - min: \(Int.min), max: \(Int.max)")
+print("UInt - min: \(UInt.min), max: \(UInt.max)")
+print("Float - min: \(Float.leastNormalMagnitude), max: \(Float.greatestFiniteMagnitude)")
+print("Double - min: \(Double.leastNormalMagnitude), max: \(Double.greatestFiniteMagnitude)")
+
+typealias list = (a: String, b: Int)
+let product: [list] = [
+    ("Чай", 1),
+    ("Листик", 2),
+    ("(Вставить название)", 7)
+]
+for list in product{
+print (list.a, list.b)
+}
+
+let i: Int = 42
+let d: Double = Double(i)
+let f: Float = Float(i)
+let s: String = "100"
+let u: Int? = Int(s) 
+let ds: Double? = Double(s)
+
+print ((i), (d), (f))
+print ((s), (u ?? 0), (ds ?? 0.0))
+
+let name = readLine()
+print ("Привет", name)

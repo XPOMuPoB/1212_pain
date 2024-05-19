@@ -1,0 +1,29 @@
+var byldygi = ["m1", "m2", "m3", "m4", "m5", "m6", "m7", "m8", "m9", "m10", "m11", "m12"]
+
+byldygi.append("g1")
+byldygi.append("g2")
+byldygi.append("g3")
+byldygi.append("g4")
+
+byldygi.insert("g5", at: 16)
+byldygi.insert("g6", at: 17)
+byldygi.insert("g7", at: 18)
+
+byldygi.removeSubrange(17..<19)
+byldygi.removeSubrange(5..<12)
+
+let bubki1 = [1, 2, 3, 4, 5]
+let bubki2 = [6, 7, 8, 9, 10]
+
+let bubki = bubki1 + bubki2
+
+for (a,i) in byldygi.enumerated() {
+    let babki = bubki.randomElement() ?? 0 
+    print ("\(i) - \(babki) балл \(babki >= 3 ? "Хорошо" : "Плохо")")
+}
+let a = [1,2,3,4,5]
+let t = a.reduce(0, +)
+
+print (t)
+print (bubki)
+print (byldygi)
